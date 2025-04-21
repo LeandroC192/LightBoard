@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class LightBoard
 {
  /** The lights on the board, where true represents on and false represents off.
@@ -8,12 +10,18 @@ public class LightBoard
  * Postcondition: each light has a 40% probability of being set to on.
  */
  public LightBoard(int numRows, int numCols)
- { /* to be implemented in part (a) */ }
+ { 
+    /* to be implemented in part (a) */ 
+
+ }
  /** Evaluates a light in row index row and column index col and returns a status
  * as described in part (b).
  * Precondition: row and col are valid indexes in lights.
  */
  public boolean evaluateLight(int row, int col)
- { /* to be implemented in part (b) */ }
+ { 
+    /* to be implemented in part (b) */ 
+
+ }
  // There may be additional instance variables, constructors, and methods not shown.
 } 
