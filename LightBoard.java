@@ -15,9 +15,9 @@ public class LightBoard
       lights = new boolean [numRows][numCols];
       for(int row = 0; row < lights.length; row++)
       {
-         for (int col = 0; col < lights(row).length; col++)
+         for (int col = 0; col < numRows; col++)
          {
-            int temp = Math.random * 10;
+            double temp = Math.random() * 10;
             if(temp <= 4)
             {
                lights[row][col] = true;
@@ -34,19 +34,38 @@ public class LightBoard
       if(lights[row][col])
       {
          int temp1 = 0;
-         for (int col1 = 0; col1 < lights(row).length; col1++)
+         for (int col1 = 0; col1 < lights.length; col1++)
          {
-            int temp = Math.random * 10;
-            if(temp <= 4)
+            if(lights[row][col1])
             {
-               lights[row][col] = true;
+               temp1++;
             }
+         }
+
+         if(temp1 % 2 != 0)
+         {
+            return (temp1 % 2 != 0);
+         }else{
+            return lights[row][col];
          }
       }else{
          int temp2 = 0;
+         for (int col1 = 0; col1 < lights.length; col1++)
+         {
+            if(lights[row][col1])
+            {
+               temp2++;
+            }
+         }
+
+         if(temp2 % 3 == 0)
+         {
+            return (temp2 % 3 == 0);
+         }else{
+            return lights[row][col];
+         }
       } 
     /* to be implemented in part (b) */ 
-      return lights[row][col];
    }
  // There may be additional instance variables, constructors, and methods not shown.
 } 
